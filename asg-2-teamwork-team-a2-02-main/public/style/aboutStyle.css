@@ -1,0 +1,163 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+
+ body{
+color: white;
+/* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+url(../images/HomeBG.jpg);
+overflow-x: hidden;
+
+
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover; */
+
+height: 100vh;
+  
+} 
+.containerAbout{
+    display: grid;
+    grid-template-rows: 7% auto;
+    height: 100vh;
+    font-family: 'Fredoka', sans-serif;
+}
+.header{
+    grid-row:1/2;
+    background: rgb(109, 102, 189);
+}
+.row2{
+    grid-row:2/3;
+    display: grid;
+    grid-template-rows: 45% auto;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding-left: 1em;
+    padding-right: 1em;
+
+}
+#about{
+    font-size: 30px;
+    color: pink;
+}
+#uni ,
+#class,#tech-used ,#countdown,#asg-link,#sem,#dateTime,#online{
+    padding-top:10px;
+    
+}
+.aboutCommon{
+    grid-column:2/3;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.memb1{
+  text-align: center;
+    grid-column:1/2;
+    padding:1em;
+    margin-top: 2em;
+    border-radius: 20px;
+    height: 30vh;
+}
+.memb2{
+    text-align: center;
+    grid-column:2/3;
+    padding:1em;
+    margin-top: 2em;
+    border-radius: 20px;
+    height: 30vh;
+}
+.memb3{
+    text-align: center;
+    grid-column:3/4;
+    padding:1em;
+    margin-top: 2em;
+    border-radius: 20px;
+    height: 30vh;
+}
+img{
+    border-radius: 100px;
+    
+    
+}
+#darPic{
+  margin-left: 148px;
+}
+#jordPic{
+  margin-left: 70px;
+}
+#johnPic{
+  margin-left: 84px;
+}
+.pic img{
+  height: 200px;
+}
+.name{
+color: white;
+}
+#asg-link > a,#online > a,.memb1 > a,.memb2 > a,.memb3 > a{
+  color: pink;
+}
+
+@media only screen and (max-width: 500px) {
+  .containerAbout{
+    display: grid;
+    grid-template-rows: 3% auto;
+    height: 100vh;
+    font-family: 'Fredoka', sans-serif;
+}
+body{
+  color: white;
+    font-size: 15px;
+  }
+    .row2{
+        grid-row:2/3;
+        display: grid;
+        grid-template-rows: 27% auto auto auto auto;
+        grid-template-columns: auto ;
+
+    }
+    .aboutCommon{
+        grid-column:1/-1;
+        text-align: center;
+        padding:1em;
+    }
+
+    .memb1{
+        text-align: center;
+        grid-row:2/3;
+        grid-column:1/2;
+        padding:1em;
+        margin-top: 1em;
+        height: 40vh;
+        
+    }
+    .memb2{
+        text-align: center;
+        grid-row:3/4;
+        grid-column:1/2;
+        padding:1em;
+        height: 40vh;
+    }
+    .memb3{
+        text-align: center;
+        grid-row:4/5;
+        grid-column:1/2;
+        padding:1em;
+        height: 40vh;
+    }
+
+
+    #darPic{
+      margin-left: 98px;
+    }
+    #jordPic{
+      margin-left: 64px;
+    }
+    #johnPic{
+      margin-left: 68px;
+    }
+.name{
+  padding-top: 1em;
+}
+}

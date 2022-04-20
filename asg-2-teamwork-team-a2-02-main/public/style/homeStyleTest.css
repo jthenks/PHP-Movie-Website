@@ -1,0 +1,384 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap"); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.red{
+  color:red;
+}
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/HomeBG.jpg);
+  /* font-family: "Lato"; */
+  /* font-family: 'Fredoka', sans-serif; */
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+#containerHome {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100vh;
+}
+
+.userInput {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  text-align: center;
+
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+}
+
+h2 {
+  color: lightgrey;
+  letter-spacing: 5px;
+  margin-top: -60px;
+  font-family: "Fredoka", sans-serif;
+}
+.searchBar {
+  grid-row: 2/3;
+  margin-bottom: 15px;
+}
+
+.title::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.buttonRow {
+  display: inline;
+  justify-content: center;
+  column-gap: 25px;
+}
+
+.photoCredit {
+  grid-row: 4/5;
+  padding-top: 50px;
+  color: lightgrey;
+  letter-spacing: 5px;
+}
+
+/*CSS Title Input design ref = https://codepen.io/lucasyem/pen/ZEEYKdj*/
+/***********************************************************/
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 100%;
+}
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field {
+  text-align: center;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  text-align: center;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+
+/*CSS Button Design ref = https://codepen.io/aruizh/pen/mdPMeGN */
+/*************************************/
+button {
+  font-weight: 600;
+  border: solid 2px black;
+  outline: 0;
+  padding: 1rem 4rem;
+  font-size: 1rem;
+  letter-spacing: 0.08rem;
+  background-color: white;
+  border-radius: 0.35rem;
+  position: relative;
+  cursor: pointer;
+}
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: pink;
+  z-index: -1;
+  border-radius: 0.35rem;
+  border: solid 2px black;
+  transition: all 0.3s ease-in-out;
+}
+
+button.style-3::after {
+  border: 0;
+  box-shadow: 0px 0px 0px 2px black;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+button.style-3:hover::after {
+  top: -0.5rem;
+  left: -0.5rem;
+  width: calc(100% + 0.5rem * 2);
+  height: calc(100% + 0.5rem * 2);
+}
+
+/****test autocomplete****/
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+/* eye icon position for show/hide password */
+#password-hider {
+  position: absolute;
+  margin-top: 13px;
+  margin-left: 698px;
+  color: white;
+}
+
+.signUp {
+  padding-top: 25px;
+  font-size: 1.1rem;
+}
+
+.showMatchingButton {
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+
+/* Mobile CSS*/
+
+@media only screen and (max-width: 500px) {
+  /* CSS Loader source: https://loading.io/css/ */
+  .lds-dual-ring {
+    display: grid;
+    width: 80px;
+    height: 80px;
+    transform: translate(180px, 280px);
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: grid;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*CSS Title Input design ref = https://codepen.io/lucasyem/pen/ZEEYKdj*/
+  /***********************************************************/
+  h2 {
+    margin-left: 15px;
+  }
+  .form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 90%;
+  }
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  .form__field::placeholder {
+    color: transparent;
+  }
+  .form__field {
+    text-align: center;
+  }
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 0.9rem;
+    cursor: text;
+    top: 20px;
+  }
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+  }
+  .form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+  }
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    text-align: center;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+    font-weight: 700;
+  }
+  /* reset input */
+  .form__field:required,
+  .form__field:invalid {
+    box-shadow: none;
+  }
+
+  /*CSS Button Design ref = https://codepen.io/aruizh/pen/mdPMeGN */
+  /*************************************/
+  .buttonRow {
+    column-gap: 10px;
+    transform: translate(0px, 10px);
+  }
+  button {
+    font-weight: 600;
+    border: solid 2px black;
+    outline: 0;
+    padding: 1rem 4rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.08rem;
+    background-color: white;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    width: 90%;
+    height: 90%;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 15px;
+  }
+
+  button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    z-index: -1;
+    border-radius: 0.35rem;
+    border: solid 2px black;
+    transition: all 0.3s ease-in-out;
+  }
+
+  button.style-3::after {
+    border: 0;
+    box-shadow: 0px 0px 0px 2px black;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+
+  button.style-3:hover::after {
+    top: -0.5rem;
+    left: -0.5rem;
+    width: calc(100% + 0.5rem * 2);
+    height: calc(100% + 0.5rem * 2);
+  }
+
+  /* eye icon position for show/hide password */
+  #password-hider {
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 170px;
+  }
+
+  .signUp {
+    padding-top: 10px;
+    font-size: 1.1rem;
+  }
+
+  .showMatchingButton {
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+}

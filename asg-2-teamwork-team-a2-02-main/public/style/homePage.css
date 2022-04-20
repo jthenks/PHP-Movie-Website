@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.homeBG{
+  background-color: #082444;
+}
+.pic img{
+  margin-left: 50px;
+ 
+}
+.notFound{
+
+  grid-column: 1/-1;
+  color:pink;
+}
+#searchMatching{
+  color: black;
+}
+
+.homeContainer{
+  padding-top: 50px;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 3em;
+ 
+  display:grid;
+  grid-template-rows: 25% 75%;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100vh;
+
+  text-align: center; 
+  grid-gap: 20px;
+
+  font-family: 'Fredoka', sans-serif;
+
+}
+#name{
+  font-size: 20px;
+}
+.col1{
+  padding-left: 10em;
+  padding-right: 10em;
+  grid-column: 1/-1;
+
+ 
+}
+.col2,.col3,.col4{
+  border-radius: 2%;
+  color: white;
+  border: solid 2px pink;
+  padding-top: 20px;
+  font-size: 30px;
+}
+.col2{
+  margin-top: 150px;
+grid-row: 2/3;
+grid-column: 2/3;
+/* display: grid;
+grid-template-rows: 1fr 1fr 1fr; */
+height: 35vh;
+}
+.col3{
+  grid-row: 2/3;
+grid-column: 1/2;
+}
+.col4{
+  grid-row: 2/3;
+grid-column: 3/4;
+  
+}
+.col3,.col4{
+  display: grid;
+  grid-template-rows: 10% auto auto;
+  overflow: scroll;
+}
+.fav-header{
+  grid-row: 1/2;
+}
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.fav-card{
+  padding :0.5em;
+}
+.title{
+  /* justify-content: right; */
+  font-size: 20px;
+}
+.user{
+  justify-content: center;
+  color: pink;
+  font-size: 20px;
+  padding-top:1em ;
+}
+.suggestionCards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/*CSS Title Input design ref = https://codepen.io/lucasyem/pen/ZEEYKdj*/
+/***********************************************************/
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 100%;
+}
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field {
+  text-align: center;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 2rem;
+  color: #9b9b9b;
+}
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  text-align: center;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+
+.loginButton{
+  padding-top: 30px;
+}
+/*CSS Button Design ref = https://codepen.io/aruizh/pen/mdPMeGN */
+/*************************************/
+button {
+  font-weight: 600;
+  border: solid 2px black;
+  outline: 0;
+  padding: 1.9rem 5rem;
+  font-size: 1rem;
+  letter-spacing: 0.08rem;
+  background-color: white;
+  border-radius: 0.35rem;
+  position: relative;
+  cursor: pointer;
+}
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: pink;
+  z-index: -1;
+  border-radius: 0.35rem;
+  border: solid 2px black;
+  transition: all 0.3s ease-in-out;
+}
+
+button.style-3::after {
+  border: 0;
+  box-shadow: 0px 0px 0px 2px black;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+button.style-3:hover::after {
+  top: -0.5rem;
+  left: -0.5rem;
+  width: calc(100% + 0.5rem * 2);
+  height: calc(100% + 0.5rem * 2);
+}
+
+
+@media only screen and (max-width: 500px) {
+  
+.homeContainer{
+  padding-top: 50px;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 2em;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  height: 100vh;
+
+  grid-gap: 30px;
+}
+.col2{
+  height: 50vh;
+}
+
+.col3,.col4{
+  height: 80vh;
+ 
+}
+.col1{
+  padding-left: 1em;
+  padding-right: 1em;
+  grid-column: 1/-1;
+
+ 
+}
+
+.col2{
+  margin-top: 0px;
+  grid-row: 2/3;
+  grid-column: 1/2;
+
+  }
+  .col3{
+    grid-row: 3/4;
+    grid-column: 1/2;
+
+  }
+  .col4{
+    grid-row: 4/5;
+    grid-column: 1/2;
+
+    margin-bottom: 30px;
+    
+  }
+  .notFound{
+    margin-left: 0px;
+  }
+  .pic img{
+    margin-left: 35px;
+   
+  }
+  
+
+}

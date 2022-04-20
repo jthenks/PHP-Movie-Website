@@ -1,0 +1,137 @@
+#container {
+  padding-left: 10em;
+  padding-right: 10em
+}
+
+#main {
+  border: 2pt pink solid;
+  border-radius: 25px;
+  height: 592px;
+}
+
+.unfavAll {
+  background-color: #494b68;
+  font-size: 12pt;
+  background-color: pink;
+  border:solid white 3px;
+  width: 147px; 
+  height: 44px;
+}
+
+#unfavMobile {
+ display: none;   
+}
+
+.favListing {
+  display: inline;
+  color: white;
+}
+
+#favListingMovies div {
+  display: grid;
+  grid-template-columns: 20% 50% 30%;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.favImg {
+  width: 96px;
+  padding: 0rem;
+  border: none;
+}
+
+.clickPoster {
+  margin-left: 0%;
+}
+
+.favTitle {
+  grid-column-start: 2;
+}
+
+#favListingMovies {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  color: white;
+}
+
+#unfavLaptop {
+  text-align: center;
+  padding-left: 50em;
+}
+
+.favListing button {
+  background-color: transparent;
+  font-family: "Lato";
+  color: white;
+}
+
+.favListing button::after {
+  background-color: transparent;
+  border: none;
+}
+
+.favTitle,
+.favouriteButton {
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1440px) {
+  #notFound {
+    margin-left: 261px;
+    margin-top: 105px;
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  #container {
+    padding-left: 0em;
+    padding-right: 0em
+  }
+
+  #unfavLaptop {
+    display: none;
+  }
+
+  #unfavMobile {
+    width: 420px;
+    margin-left: 270px;
+    padding-right: 5em;
+    display: inline
+  }
+
+  .favListing {
+    display: inline;
+    overflow-y: scroll;
+    height: 777px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 25% 60% 15%;
+  }
+
+  #toggle {
+    height: 25px;
+  }
+
+  .buttons {
+    height: 40px;
+  }
+
+  #favListingMovies div {
+    grid-template-columns: 25% 50% 25%;
+    padding-left: 1em;
+  }
+
+  .favTitle,
+  .favouriteButton {
+    margin-top: 25px;
+  }
+
+  #notFound {
+    margin-left: 15px;
+    margin-top: 150px;
+  }
+}
+
